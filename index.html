@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Online IDE</title>
+    <style>
+        .container {
+          display: flex;
+          flex-direction: row;
+          justify-content: space-around;
+          margin-top: 20px;
+        }
+        #input{
+            margin-bottom: 20px;
+        }
+        #submit{
+            margin-top: 20px;
+        }
+    </style>
+  </head>
+  <body>
+    <center>
+      <h1>Online IDE</h1>
+    </center>
+    <div class="container">
+        <div class="code-area">
+            <form action="compileCode" method="post" name="codeForm" id="codeForm">
+              <h3>Code</h3>
+              <textarea name="code" id="code" cols="100" rows="15"></textarea>
+              <br />
+              <h3>Input</h3>
+              <textarea name="input" id="input" cols="100" rows="10"></textarea>
+              <br />
+              Language:<select name="lang" id="lang">
+                <option value="c">C</option>
+                <option value="cpp">C++</option>
+                <option value="java">Java</option>
+                <option value="Java Script">Java Script</option>
+                <option value="PHP">PHP</option>
+                <option value="Kotline">Kotline</option>
+                <option value=".Net">.Net</option>
+                <option value="python">Python</option>
+              </select>
+              Compile With Input :
+              <input type="radio" name="radio" id="radio" value="yes" />Yes
+              <input type="radio" name="radio" id="radio" value="no" />No
+              <br />
+              <input type="submit" value="Compile" name="submit" id="submit" />
+            </form>
+          </div>
+          <div class="output-area">
+              <h3>Output</h3>
+              <textarea name="output" id="output" cols="100" rows="30"></textarea>
+          </div>
+    </div>
+  </body>
+</html>
